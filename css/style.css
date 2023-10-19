@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Noto+Sans:ital,wght@1,900&display=swap");
+
+:root {
+  --color-text-dark-0: #272547;
+  --color-text-dark-1: #4f4d6d;
+  --color-text-light-0: #eee;
+  --color-primary: #ff8255;
+  --color-secondary: #ffa281;
+  --color-green-primary: #a7ffd6;
+  --color-green-secondary: #63ffb1;
+  --bg-section-price: #ebecf7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  color: var(--color-text-dark-0);
+}
+
+.max-width {
+  width: 100%;
+  max-width: 120rem;
+}
+
+header {
+  padding: 3rem;
+}
+
+.logo {
+  font-family: Noto Sans;
+  letter-spacing: -1px;
+  font-size: 3.5rem;
+  cursor: pointer;
+}
+
+.logo span {
+  color: var(--color-primary);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+header menu {
+  display: none;
+}
+
+header menu svg {
+  height: 3.5rem;
+  width: 3.5rem;
+  fill: var(--color-text-dark-0);
+  cursor: pointer;
+}
+
+.nav-link {
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 1rem;
+  transition: color 0.2s;
+}
+
+.nav-link:hover:not(:last-child) {
+  color: var(--color-primary);
+}
+
+.nav-link:last-child {
+  border-radius: 50px;
+  padding: 1rem 2.6rem;
+  background-color: var(--color-secondary);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.nav-link:last-child:hover {
+  background-color: var(--color-primary);
+}
+
+.hero {
+  position: relative;
+  height: 74rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  color: var(--color-text-light-0);
+  padding: 3rem;
+  background-image: url(../img/index-01.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  background-color: #2725476e;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.container-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 2.4rem;
+  font-weight: 200;
+  line-height: 2.6rem;
+}
+
+.section-programs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 3rem 12rem;
+  gap: 6rem;
+  border-top: 1px solid #27254731;
+  border-bottom: 1px solid #27254731;
+}
+
+.title-section {
+  font-size: 4rem;
+}
+
+.container-programs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+}
+
+.programs {
+  height: 64rem;
+  color: var(--color-text-light-0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.6rem;
+  gap: 2rem;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s;
+}
+
+.programs:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.programs h3 {
+  font-size: 3rem;
+}
+
+.programs p {
+  font-size: 1.8rem;
+}
+
+.section-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  padding: 8rem 3rem 12rem;
+  background-color: var(--bg-section-price);
+}
+
+.container-price {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.price {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 2rem;
+  gap: 5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.price:last-child:after {
+  position: absolute;
+  content: "MAIS VENDIDO";
+  font-size: 1.6rem;
+  font-weight: bolder;
+  top: 3rem;
+  right: -6rem;
+  padding: 1.6rem 5rem;
+  background-color: var(--color-secondary);
+  transform: rotate(45deg);
+}
+
+.price h3 {
+  font-size: 3rem;
+}
+
+.price p,
+.price li {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+.price-value {
+  font-size: 5rem;
+  font-weight: bolder;
+  color: var(--color-primary);
+}
+
+.per-month {
+  color: var(--color-text-dark-1);
+  margin-top: 0.4rem;
+}
+
+.per-month span {
+  padding: 0.4rem 1rem;
+  font-weight: bolder;
+  background-color: var(--color-green-primary);
+}
+
+.price button {
+  padding: 1.1rem;
+  border-radius: 50px;
+  font-size: 1.7rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: var(--color-green-primary);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.price button:hover {
+  background-color: var(--color-green-secondary);
+}
+
+footer {
+  padding: 3rem;
+  color: var(--color-text-light-0);
+  background-image: url(../img/index-07.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.section-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10rem;
+  margin: 0 auto;
+}
+
+.footer-info {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.footer-info h3 {
+  font-size: 2.4rem;
+}
+
+.footer-info p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 950px) {
+  .container-programs {
+    grid-template-columns: repeat(2, 40rem);
+    justify-content: center;
+  }
+
+  .container-price {
+    grid-template-columns: repeat(2, 35rem);
+    justify-content: center;
+  }
+
+  .section-footer {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-text h1 {
+    font-size: 5.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-text p {
+    font-size: 2.2rem;
+    font-weight: 200;
+    line-height: 2.6rem;
+  }
+
+  .container-hero {
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+
+  .container-programs {
+    grid-template-columns: repeat(1, 35rem);
+  }
+
+  .container-price {
+    grid-template-columns: repeat(1, 30rem);
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header menu {
+    display: block;
+  }
+
+  .footer-info {
+    gap: 1rem;
+  }
+
+  .text-footer {
+    display: none;
+  }
+
+  .overlay {
+    display: block;
+  }
+}
+
+@media (max-width: 450px) {
+  .section-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-info {
+    padding: 0;
+  }
+}
